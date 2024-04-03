@@ -13,6 +13,9 @@
 		6D167FD82BBD3BD400734858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D167FD72BBD3BD400734858 /* LaunchScreen.storyboard */; };
 		6D167FDC2BBD3F5E00734858 /* PostList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D167FDB2BBD3F5E00734858 /* PostList.storyboard */; };
 		6D167FDE2BBD3F6F00734858 /* PostListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D167FDD2BBD3F6F00734858 /* PostListVC.swift */; };
+		6D475DE52BBD889E00DA990F /* PostListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D475DE42BBD889E00DA990F /* PostListTVC.swift */; };
+		6D475DE72BBD88E200DA990F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D475DE62BBD88E200DA990F /* AppConstants.swift */; };
+		6DC194602BBD8F9900B0B142 /* PostListVC+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1945F2BBD8F9900B0B142 /* PostListVC+UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		6D167FDB2BBD3F5E00734858 /* PostList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostList.storyboard; sourceTree = "<group>"; };
 		6D167FDD2BBD3F6F00734858 /* PostListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListVC.swift; sourceTree = "<group>"; };
 		6D167FDF2BBD401100734858 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D475DE42BBD889E00DA990F /* PostListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTVC.swift; sourceTree = "<group>"; };
+		6D475DE62BBD88E200DA990F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		6DC1945F2BBD8F9900B0B142 /* PostListVC+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostListVC+UITableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 		6D167FD12BBD3B6700734858 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6D475DE62BBD88E200DA990F /* AppConstants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -117,10 +124,20 @@
 		6D167FDA2BBD3DF100734858 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6D475DE32BBD888500DA990F /* Views */,
 				6D167FDB2BBD3F5E00734858 /* PostList.storyboard */,
 				6D167FDD2BBD3F6F00734858 /* PostListVC.swift */,
+				6DC1945F2BBD8F9900B0B142 /* PostListVC+UITableView.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6D475DE32BBD888500DA990F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D475DE42BBD889E00DA990F /* PostListTVC.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +235,9 @@
 				6D167FD42BBD3B6700734858 /* AppDelegate.swift in Sources */,
 				6D167FD52BBD3B6700734858 /* SceneDelegate.swift in Sources */,
 				6D167FDE2BBD3F6F00734858 /* PostListVC.swift in Sources */,
+				6D475DE52BBD889E00DA990F /* PostListTVC.swift in Sources */,
+				6DC194602BBD8F9900B0B142 /* PostListVC+UITableView.swift in Sources */,
+				6D475DE72BBD88E200DA990F /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
