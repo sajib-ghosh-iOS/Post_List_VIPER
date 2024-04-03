@@ -17,8 +17,12 @@ class PostListVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
-    
     @IBAction func didTapOnAddPost(_ sender: Any) {
-        
+        let storyboard = UIStoryboard(name: "AddPost", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(
+            withIdentifier: "AddPostVC") as? AddPostVC else {
+            return
+        }
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

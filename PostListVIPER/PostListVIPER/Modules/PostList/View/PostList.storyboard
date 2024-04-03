@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7TC-Te-BIi">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -243,10 +243,10 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="287-K0-Y4p" userLabel="AddPostView">
-                                <rect key="frame" x="227" y="752" width="150" height="50"/>
+                                <rect key="frame" x="207" y="752" width="170" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7l-HJ-EiK">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -255,7 +255,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Sbt-D3-J0j">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e17-Z7-Nex">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -278,10 +278,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bm-rb-s8B">
-                                                <rect key="frame" x="50" y="0.0" width="100" height="50"/>
+                                                <rect key="frame" x="50" y="0.0" width="120" height="50"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Post" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asc-cD-fbk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Post" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asc-cD-fbk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -292,7 +292,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="GjP-Zc-mwx"/>
                                                     <constraint firstItem="Asc-cD-fbk" firstAttribute="top" secondItem="8bm-rb-s8B" secondAttribute="top" id="Pz6-QP-Dba"/>
                                                     <constraint firstAttribute="bottom" secondItem="Asc-cD-fbk" secondAttribute="bottom" id="YwT-he-ajI"/>
-                                                    <constraint firstAttribute="width" constant="100" id="g41-Cw-1lx"/>
+                                                    <constraint firstAttribute="width" constant="120" id="g41-Cw-1lx"/>
                                                     <constraint firstAttribute="trailing" secondItem="Asc-cD-fbk" secondAttribute="trailing" id="hgh-8H-Ms3"/>
                                                     <constraint firstItem="Asc-cD-fbk" firstAttribute="leading" secondItem="8bm-rb-s8B" secondAttribute="leading" id="kd3-UB-xaJ"/>
                                                 </constraints>
@@ -307,8 +307,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDi-eO-Gdu">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDi-eO-Gdu">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <connections>
                                             <action selector="didTapOnAddPost:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HZz-cc-9W1"/>
@@ -344,6 +344,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="287-K0-Y4p" secondAttribute="bottom" constant="16" id="tFR-4A-WED"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="VZZ-hn-OCy"/>
                     <connections>
                         <outlet property="addPostStkView" destination="Sbt-D3-J0j" id="kkc-jK-UkX"/>
                         <outlet property="addPostView" destination="8bm-rb-s8B" id="g3i-Kq-dSf"/>
@@ -352,7 +353,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="-2"/>
+            <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qpH-vc-Yeg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7TC-Te-BIi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lV9-HF-HYb">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="gBH-7q-7db"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GRM-Pq-4JR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
