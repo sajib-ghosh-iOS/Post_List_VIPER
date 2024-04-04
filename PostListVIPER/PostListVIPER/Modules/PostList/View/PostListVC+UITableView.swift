@@ -9,18 +9,20 @@ import Foundation
 import UIKit
 
 extension PostListVC: UITableViewDataSource {
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return posts.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: TableViewCellIdentifiers.postListTVC) as? PostListTVC
         else { return UITableViewCell() }
+        cell.cellFillWith(data: posts[indexPath.row])
         return cell
     }
 }

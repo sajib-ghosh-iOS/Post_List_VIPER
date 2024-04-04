@@ -17,4 +17,11 @@ struct AddPostConstants {
 struct TableViewCellIdentifiers {
     static let postListTVC = "postListTVC"
 }
-
+struct StoryboardNames {
+    static let postList = "PostList"
+    static let addPost = "AddPost"
+}
+struct StoryboardIdentifiers {
+    static let postList = "PostListVC"
+    static let addPost = "AddPostVC"
+}

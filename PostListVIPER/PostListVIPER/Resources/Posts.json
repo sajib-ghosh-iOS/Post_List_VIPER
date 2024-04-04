@@ -1,0 +1,58 @@
+[{
+        "id": 1,
+        "name": "Sheryl",
+        "userName": "@smata",
+        "description": "Okay #Apple... I need your help!!! I'm still less than a year into investing, but haven't been able to find a mentor... suggestion?",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg"
+    }, {
+        "id": 2,
+        "name": "Jackie",
+        "userName": "@jbowerson",
+        "description": "While I listen to #TSLA's announcements (yes, again)... I thought back to this news I captured last night...",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+    }, {
+        "id": 3,
+        "name": "Sajib",
+        "userName": "@imSajib",
+        "description": "An apple mobile which is nothing like apple",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Sheryl",
+        "userName": "@smata",
+        "description": "Okay #Apple... I need your help!!! I'm still less than a year into investing, but haven't been able to find a mentor... suggestion?",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg"
+    }, {
+        "id": 5,
+        "name": "Jackie",
+        "userName": "@jbowerson",
+        "description": "While I listen to #TSLA's announcements (yes, again)... I thought back to this news I captured last night...",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+    }, {
+        "id": 6,
+        "name": "Sajib",
+        "userName": "@imSajib",
+        "description": "An apple mobile which is nothing like apple",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Sheryl",
+        "userName": "@smata",
+        "description": "Okay #Apple... I need your help!!! I'm still less than a year into investing, but haven't been able to find a mentor... suggestion?",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg"
+    }, {
+        "id": 8,
+        "name": "Jackie",
+        "userName": "@jbowerson",
+        "description": "While I listen to #TSLA's announcements (yes, again)... I thought back to this news I captured last night...",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
+    }, {
+        "id": 9,
+        "name": "Sajib",
+        "userName": "@imSajib",
+        "description": "An apple mobile which is nothing like apple",
+        "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+    }
+]

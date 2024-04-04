@@ -8,16 +8,15 @@
 import UIKit
 
 class PostListTVC: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var imgPost: UIImageView!
+    
+    func cellFillWith(data: PostModel) {
+        lblName.text = data.name
+        lblUserName.text = data.userName
+        lblDescription.text = data.description
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
