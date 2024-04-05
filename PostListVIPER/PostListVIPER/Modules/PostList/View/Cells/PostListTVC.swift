@@ -18,7 +18,6 @@ class PostListTVC: UITableViewCell {
         lblName.text = data.name
         lblUserName.text = data.userName
         lblDescription.text = data.description
-        print(data.thumbnail)
         if let url = URL(string: data.thumbnail) {
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: url)

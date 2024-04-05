@@ -78,6 +78,7 @@ extension PostListVC: PostListViewProtocol {
 extension PostListVC: AddPostCompletionProtocol {
     func onAddPostSuccess(post: PostModel) {
         posts.insert(post, at: 0)
+        filteredPosts.insert(post, at: 0)
         // Update table view with animation
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .top)
