@@ -14,10 +14,20 @@ extension AddPostVC: UITextViewDelegate {
             textView.textColor = UIColor.black
         }
     }
+    func textViewDidChange(_ textView: UITextView) {
+        lblError.isHidden = true
+        if textView.text.isEmpty {
+            btnSubmit.setTitleColor(.gray, for: .normal)
+        } else {
+            btnSubmit.setTitleColor(.systemBlue, for: .normal)
+        }
+        isValid = lblError.isHidden
+    }
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
             textView.text = AddPostConstants.addPostDescriptionPlaceHolder
             textView.textColor = UIColor.lightGray
+            btnSubmit.setTitleColor(.gray, for: .normal)
         }
     }
 }

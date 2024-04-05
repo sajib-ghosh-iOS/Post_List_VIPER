@@ -11,22 +11,59 @@ class AddPostVC: UIViewController {
 
     @IBOutlet weak var imgPost: UIImageView!
     @IBOutlet weak var txtDescription: UITextView!
+    @IBOutlet weak var lblError: UILabel!
+    @IBOutlet weak var btnSubmit: UIButton!
+
+    var presenter: AddPostPresenterProtocol?
+    var isValid: Bool = false
+    var dependency: AddPostDependency?
+    weak var delegate: AddPostCompletionProtocol?
+    var imageURL: NSURL?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+    // MARK: - SetupUI
+    func setupUI() {
         txtDescription.text = AddPostConstants.addPostDescriptionPlaceHolder
         txtDescription.textColor = UIColor.lightGray
         txtDescription.delegate = self
+        txtDescription.layer.cornerRadius = 4.0
+        txtDescription.layer.borderWidth = 1.0
+        txtDescription.layer.borderColor = UIColor.lightGray.cgColor
+        btnSubmit.setTitleColor(.gray, for: .normal)
+        lblError.isHidden = true
     }
     // MARK: - IBActions
     @IBAction func didTapOnBackButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
     @IBAction func didTapOnSubmitButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        validateForm()
+        if isValid {
+            let name = dependency?.user.name ?? ""
+            let userName = dependency?.user.userName ?? ""
+            let description = txtDescription.text ?? ""
+            let post = AddPostModel(name: name, userName: userName, description: description, imageURL: imageURL)
+            presenter?.addPost(post: post)
+            dismiss(animated: true)
+        }
     }
     @IBAction func didTapOnImageButton(_ sender: UIButton) {
         openActionSheet()
     }
+    // MARK: - Form Validation
+    func validateForm() {
+        if txtDescription.text == AddPostConstants.addPostDescriptionPlaceHolder {
+            lblError.isHidden = false
+        }
+        if txtDescription.text.isEmpty {
+            lblError.isHidden = false
+        }
+        isValid = lblError.isHidden
+    }
+    // MARK: - Image picker options
     func openActionSheet() {
         // create the alert action sheet
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
@@ -57,5 +94,16 @@ class AddPostVC: UIViewController {
         controller.allowsEditing = false
         controller.delegate = self
         present(controller, animated: true)
+    }
+}
+
+extension AddPostVC: AddPostViewProtocol {
+
+    func onAddPostResponseSuccess(post: PostModel) {
+        delegate?.onAddPostSuccess(post: post)
+    }
+
+    func onAddPostResponseFailure(error: String) {
+        delegate?.onAddPostFailure(error: error)
     }
 }

@@ -27,6 +27,13 @@
 		6DC7AC212BBEEAC8007D512A /* PostListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC7AC202BBEEAC8007D512A /* PostListInteractor.swift */; };
 		6DC7AC232BBF02E0007D512A /* Posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 6DC7AC222BBF02E0007D512A /* Posts.json */; };
 		6DC7AC252BBF1868007D512A /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC7AC242BBF1868007D512A /* CustomError.swift */; };
+		6DC7AC2C2BBFDF2B007D512A /* AddPostProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC7AC2B2BBFDF2B007D512A /* AddPostProtocols.swift */; };
+		6DC7AC2E2BBFDFFF007D512A /* AddPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC7AC2D2BBFDFFF007D512A /* AddPostModel.swift */; };
+		6DC7AC302BBFE3CC007D512A /* AddPostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC7AC2F2BBFE3CC007D512A /* AddPostRouter.swift */; };
+		6DC7AC322BBFE4FA007D512A /* AddPostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC7AC312BBFE4FA007D512A /* AddPostPresenter.swift */; };
+		6DC7AC342BBFE5BD007D512A /* AddPostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC7AC332BBFE5BD007D512A /* AddPostInteractor.swift */; };
+		6DC7AC362BC01459007D512A /* AddPostDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC7AC352BC01459007D512A /* AddPostDependency.swift */; };
+		6DC7AC382BC01482007D512A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC7AC372BC01482007D512A /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +59,13 @@
 		6DC7AC202BBEEAC8007D512A /* PostListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListInteractor.swift; sourceTree = "<group>"; };
 		6DC7AC222BBF02E0007D512A /* Posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Posts.json; sourceTree = "<group>"; };
 		6DC7AC242BBF1868007D512A /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		6DC7AC2B2BBFDF2B007D512A /* AddPostProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostProtocols.swift; sourceTree = "<group>"; };
+		6DC7AC2D2BBFDFFF007D512A /* AddPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostModel.swift; sourceTree = "<group>"; };
+		6DC7AC2F2BBFE3CC007D512A /* AddPostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostRouter.swift; sourceTree = "<group>"; };
+		6DC7AC312BBFE4FA007D512A /* AddPostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostPresenter.swift; sourceTree = "<group>"; };
+		6DC7AC332BBFE5BD007D512A /* AddPostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostInteractor.swift; sourceTree = "<group>"; };
+		6DC7AC352BC01459007D512A /* AddPostDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostDependency.swift; sourceTree = "<group>"; };
+		6DC7AC372BC01482007D512A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +188,11 @@
 			isa = PBXGroup;
 			children = (
 				6DC7AC0A2BBDACB6007D512A /* View */,
+				6DC7AC292BBFDEE7007D512A /* Presenter */,
+				6DC7AC282BBFDEE7007D512A /* Interactor */,
+				6DC7AC272BBFDEE6007D512A /* Entity */,
+				6DC7AC262BBFDEE6007D512A /* Router */,
+				6DC7AC2A2BBFDEE7007D512A /* Protocols */,
 			);
 			path = AddPost;
 			sourceTree = "<group>";
@@ -217,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				6DC7AC1A2BBED582007D512A /* PostModel.swift */,
+				6DC7AC372BC01482007D512A /* UserModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -225,6 +245,47 @@
 			isa = PBXGroup;
 			children = (
 				6DC7AC182BBED3CC007D512A /* PostListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6DC7AC262BBFDEE6007D512A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6DC7AC2F2BBFE3CC007D512A /* AddPostRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		6DC7AC272BBFDEE6007D512A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				6DC7AC2D2BBFDFFF007D512A /* AddPostModel.swift */,
+				6DC7AC352BC01459007D512A /* AddPostDependency.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		6DC7AC282BBFDEE7007D512A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6DC7AC332BBFE5BD007D512A /* AddPostInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6DC7AC292BBFDEE7007D512A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6DC7AC312BBFE4FA007D512A /* AddPostPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6DC7AC2A2BBFDEE7007D512A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6DC7AC2B2BBFDF2B007D512A /* AddPostProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -326,11 +387,18 @@
 				6DC7AC0E2BBDB41B007D512A /* AddPostVC.swift in Sources */,
 				6DC7AC192BBED3CC007D512A /* PostListProtocols.swift in Sources */,
 				6D167FD42BBD3B6700734858 /* AppDelegate.swift in Sources */,
+				6DC7AC2E2BBFDFFF007D512A /* AddPostModel.swift in Sources */,
 				6DC7AC102BBDD706007D512A /* AddPostVC+UIImagePicker.swift in Sources */,
 				6DC7AC122BBDDC49007D512A /* AddPostVC+UITextView.swift in Sources */,
+				6DC7AC2C2BBFDF2B007D512A /* AddPostProtocols.swift in Sources */,
 				6DC7AC252BBF1868007D512A /* CustomError.swift in Sources */,
+				6DC7AC342BBFE5BD007D512A /* AddPostInteractor.swift in Sources */,
+				6DC7AC302BBFE3CC007D512A /* AddPostRouter.swift in Sources */,
+				6DC7AC382BC01482007D512A /* UserModel.swift in Sources */,
+				6DC7AC322BBFE4FA007D512A /* AddPostPresenter.swift in Sources */,
 				6D167FD52BBD3B6700734858 /* SceneDelegate.swift in Sources */,
 				6DC7AC1F2BBEEA1C007D512A /* PostListPresenter.swift in Sources */,
+				6DC7AC362BC01459007D512A /* AddPostDependency.swift in Sources */,
 				6DC7AC082BBDAC94007D512A /* PostListVC.swift in Sources */,
 				6D475DE72BBD88E200DA990F /* AppConstants.swift in Sources */,
 				6DC7AC052BBDAC94007D512A /* PostListTVC.swift in Sources */,

@@ -17,6 +17,10 @@ extension AddPostVC: UIImagePickerControllerDelegate {
         guard let image = info[.originalImage] as? UIImage else {
             return
         }
+        guard let url = info[.imageURL] as? NSURL else {
+            return
+        }
+        imageURL = url
         imgPost.image = image
     }
 }

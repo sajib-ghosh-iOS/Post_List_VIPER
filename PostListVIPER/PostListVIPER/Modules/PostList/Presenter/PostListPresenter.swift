@@ -25,8 +25,7 @@ class PostListPresenter: PostListPresenterProtocol {
     func postListFetchFailure(error: Error) {
         view?.onPostListResponseFailure(error: error.localizedDescription)
     }
-
-    func showCreatePostScreen(navigationConroller: UINavigationController) {
-        router?.pushToCreatePostScreen(navigationConroller: navigationConroller)
+    func showCreatePostScreen(from: PostListVC, to navigationController: UINavigationController) {
+        router?.showCreatePostScreen(from: from, to: navigationController)
     }
 }

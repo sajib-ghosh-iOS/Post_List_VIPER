@@ -22,12 +22,7 @@ class PostListVC: UIViewController {
     }
 
     @IBAction func didTapOnAddPost(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "AddPost", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(
-            withIdentifier: "AddPostVC") as? AddPostVC else {
-            return
-        }
-        navigationController?.pushViewController(viewController, animated: true)
+        presenter?.showCreatePostScreen(from: self, to: navigationController!)
     }
 }
 
@@ -39,6 +34,20 @@ extension PostListVC: PostListViewProtocol {
     }
 
     func onPostListResponseFailure(error: String) {
+        // Show Error
+        print(error)
+    }
+}
+
+extension PostListVC: AddPostCompletionProtocol {
+    func onAddPostSuccess(post: PostModel) {
+        posts.insert(post, at: 0)
+        // Update table view with animation
+        let indexPath = IndexPath(row: 0, section: 0)
+        tableView.insertRows(at: [indexPath], with: .top)
+    }
+
+    func onAddPostFailure(error: String) {
         // Show Error
         print(error)
     }

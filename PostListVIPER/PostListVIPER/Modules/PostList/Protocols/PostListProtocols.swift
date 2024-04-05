@@ -17,7 +17,7 @@ protocol PostListPresenterProtocol: AnyObject {
     var interactor: PostListInteractorProtocol? {get set}
     var router: PostListRouterProtocol? {get set}
     func fetchPostList()
-    func showCreatePostScreen(navigationConroller: UINavigationController)
+    func showCreatePostScreen(from: PostListVC, to navigationController: UINavigationController)
     func postListFetchSuccess(posts: [PostModel])
     func postListFetchFailure(error: Error)
 }
@@ -27,5 +27,5 @@ protocol PostListInteractorProtocol: AnyObject {
 }
 protocol PostListRouterProtocol: AnyObject {
     static func createModule() -> PostListVC?
-    func pushToCreatePostScreen(navigationConroller: UINavigationController)
+    func showCreatePostScreen(from: PostListVC, to navigationController: UINavigationController)
 }

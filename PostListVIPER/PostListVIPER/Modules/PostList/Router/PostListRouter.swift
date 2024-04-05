@@ -28,8 +28,11 @@ class PostListRouter: PostListRouterProtocol {
         return view
     }
 
-    func pushToCreatePostScreen(navigationConroller: UINavigationController) {
-//        let addPostVC = AddPostRouter.createAddPostModule()
-//        navigationController.pushViewController(addPostVC, animated: true)
+    func showCreatePostScreen(from: PostListVC, to navigationController: UINavigationController) {
+        if let addPostVC = AddPostRouter.createModule(dependency:
+                                                        AddPostDependency(user: UserModel(userId: 1, name: "Sajib", userName: "@imSajib"))) {
+            addPostVC.delegate = from
+            navigationController.present(addPostVC, animated: true)
+        }
     }
 }
