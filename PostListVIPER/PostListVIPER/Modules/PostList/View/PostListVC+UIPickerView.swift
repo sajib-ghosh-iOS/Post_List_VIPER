@@ -26,6 +26,9 @@ extension PostListVC: UIPickerViewDataSource, UIPickerViewDelegate {
         txtUser.text = userNameArray[row]
         selectedUser = userNameArray[row]
         filteredPosts = presenter?.getPostOf(userName: selectedUser, posts: posts) ?? []
+        if selectedUser != "All" {
+            DataManager.sharedInstance.user = users.filter {$0.userName == selectedUser}.first!
+        }
         reloadTableView()
     }
 }
