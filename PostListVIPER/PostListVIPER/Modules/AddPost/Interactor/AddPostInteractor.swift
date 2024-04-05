@@ -16,6 +16,6 @@ class AddPostInteractor: AddPostInteractorProtocol {
                                   userName: post.userName,
                                   description: post.description,
                                   thumbnail: post.imageURL?.absoluteString ?? "")
-        presenter?.view?.onAddPostResponseSuccess(post: postModel)
+        presenter?.addPostSuccess(post: postModel)
     }
 }

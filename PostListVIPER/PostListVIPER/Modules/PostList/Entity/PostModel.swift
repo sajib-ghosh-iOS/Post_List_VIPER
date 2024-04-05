@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct PostModel: Decodable {
     let id: Int
     let name: String

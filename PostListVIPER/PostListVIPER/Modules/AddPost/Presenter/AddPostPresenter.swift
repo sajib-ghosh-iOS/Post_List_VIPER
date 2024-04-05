@@ -17,9 +17,11 @@ class AddPostPresenter: AddPostPresenterProtocol {
         interactor?.addPostData(post: post)
     }
 
-    func addPostFetchSuccess(post: PostModel) {
+    func addPostSuccess(post: PostModel) {
+        view?.onAddPostResponseSuccess(post: post)
     }
 
-    func addPostFetchFailure(error: Error) {
+    func addPostFailure(error: Error) {
+        view?.onAddPostResponseFailure(error: error.localizedDescription)
     }
 }

@@ -11,6 +11,9 @@ class PostListInteractor: PostListInteractorProtocol {
 
     var presenter: PostListPresenterProtocol?
 
+    /// Get postData from JSON and decodes to PostModel
+    /// If decoding succeedes it sends the post array to presenter
+    /// In case of error it sends the respective error to presenter
     func getPostListData() {
         if let postsRawData = PostListInteractor.loadJsonData(fileName: "Posts") {
             do {
@@ -24,6 +27,9 @@ class PostListInteractor: PostListInteractorProtocol {
         }
     }
 
+    /// Get userData from JSON and decodes to UserModel
+    /// If decoding succeedes it sends the user array to presenter
+    /// In case of error it sends the respective error to presenter
     func getUserListData() {
         if let usersRawData = PostListInteractor.loadJsonData(fileName: "Users") {
             do {
@@ -37,6 +43,9 @@ class PostListInteractor: PostListInteractorProtocol {
         }
     }
 
+    /// It returns array of UserNames from array of UserModel
+    /// - Parameter users: Array of UserModel
+    /// - Returns: array of UserNames
     func getUserNamesFrom(users: [UserModel]) -> [String] {
         var userNames = [String]()
         userNames.append("All")
@@ -45,6 +54,11 @@ class PostListInteractor: PostListInteractorProtocol {
         return userNames
     }
 
+    /// This function filters the posts for a particular user
+    /// - Parameters:
+    ///   - userName: Username of the User
+    ///   - posts: Array of all Post
+    /// - Returns: Array of Post after filter
     func filterPostWith(userName: String, posts: [PostModel]) -> [PostModel] {
         if userName == "All" {
             return posts
@@ -53,6 +67,9 @@ class PostListInteractor: PostListInteractorProtocol {
         }
     }
 
+    /// This function fetches the JSON file and converts it to jsonString and jsonString to data
+    /// - Parameter fileName: name of the JSON file
+    /// - Returns: JSON Data
     private static func loadJsonData(fileName: String) -> Data? {
         let path = Bundle(for: self).path(forResource: fileName, ofType: "json")
         guard let jsonString = try? String(contentsOfFile: path!, encoding: .utf8) else {

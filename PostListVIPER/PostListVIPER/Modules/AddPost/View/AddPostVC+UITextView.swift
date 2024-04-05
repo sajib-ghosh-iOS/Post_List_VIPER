@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+
 extension AddPostVC: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {

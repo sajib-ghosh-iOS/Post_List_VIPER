@@ -17,8 +17,8 @@ protocol AddPostPresenterProtocol: AnyObject {
     var interactor: AddPostInteractorProtocol? {get set}
     var router: AddPostRouterProtocol? {get set}
     func addPost(post: AddPostModel)
-    func addPostFetchSuccess(post: PostModel)
-    func addPostFetchFailure(error: Error)
+    func addPostSuccess(post: PostModel)
+    func addPostFailure(error: Error)
 }
 protocol AddPostInteractorProtocol: AnyObject {
     var presenter: AddPostPresenterProtocol? {get set}
