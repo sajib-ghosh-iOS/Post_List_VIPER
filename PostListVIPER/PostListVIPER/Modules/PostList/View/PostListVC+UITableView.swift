@@ -15,19 +15,20 @@ extension PostListVC: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return filteredPosts.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: TableViewCellIdentifiers.postListTVC) as? PostListTVC
         else { return UITableViewCell() }
-        cell.cellFillWith(data: posts[indexPath.row])
+        cell.cellFillWith(data: filteredPosts[indexPath.row])
         return cell
     }
 }
 
 extension PostListVC: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }

@@ -12,7 +12,7 @@ class PostListInteractor: PostListInteractorProtocol {
     var presenter: PostListPresenterProtocol?
 
     func getPostListData() {
-        if let postsRawData = PostListInteractor.loadJsonData() {
+        if let postsRawData = PostListInteractor.loadJsonData(fileName: "Posts") {
             do {
                 let posts = try JSONDecoder().decode([PostModel].self, from: postsRawData)
                 presenter?.postListFetchSuccess(posts: posts)
@@ -24,8 +24,37 @@ class PostListInteractor: PostListInteractorProtocol {
         }
     }
 
-    private static func loadJsonData() -> Data? {
-        let path = Bundle(for: self).path(forResource: "Posts", ofType: "json")
+    func getUserListData() {
+        if let usersRawData = PostListInteractor.loadJsonData(fileName: "Users") {
+            do {
+                let users = try JSONDecoder().decode([UserModel].self, from: usersRawData)
+                presenter?.userListFetchSuccess(users: users)
+            } catch {
+                presenter?.userListFetchFailure(error: CustomError.unableToParseData)
+            }
+        } else {
+            presenter?.userListFetchFailure(error: CustomError.dataNotFound)
+        }
+    }
+
+    func getUserNamesFrom(users: [UserModel]) -> [String] {
+        var userNames = [String]()
+        userNames.append("All")
+        let usrNamesArray = users.map {$0.userName}
+        userNames.append(contentsOf: usrNamesArray)
+        return userNames
+    }
+
+    func filterPostWith(userName: String, posts: [PostModel]) -> [PostModel] {
+        if userName == "All" {
+            return posts
+        } else {
+            return posts.filter {$0.userName == userName}
+        }
+    }
+
+    private static func loadJsonData(fileName: String) -> Data? {
+        let path = Bundle(for: self).path(forResource: fileName, ofType: "json")
         guard let jsonString = try? String(contentsOfFile: path!, encoding: .utf8) else {
             return nil
         }

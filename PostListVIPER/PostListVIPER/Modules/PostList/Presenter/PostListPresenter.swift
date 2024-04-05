@@ -25,6 +25,26 @@ class PostListPresenter: PostListPresenterProtocol {
     func postListFetchFailure(error: Error) {
         view?.onPostListResponseFailure(error: error.localizedDescription)
     }
+
+    func fetchUserList() {
+        interactor?.getUserListData()
+    }
+
+    func getUserNamesFrom(users: [UserModel]) -> [String] {
+        return interactor?.getUserNamesFrom(users: users) ?? []
+    }
+
+    func userListFetchSuccess(users: [UserModel]) {
+        view?.onUserListResponseSuccess(users: users)
+    }
+
+    func getPostOf(userName: String, posts: [PostModel]) -> [PostModel] {
+        interactor?.filterPostWith(userName: userName, posts: posts) ?? []
+    }
+    func userListFetchFailure(error: Error) {
+        view?.onUserListResponseFailure(error: error.localizedDescription)
+    }
+
     func showCreatePostScreen(from: PostListVC, to navigationController: UINavigationController) {
         router?.showCreatePostScreen(from: from, to: navigationController)
     }
